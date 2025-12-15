@@ -43,7 +43,7 @@ function updateBtns() {
         btnPlay.classList.add('active')
     }
 }
-
+// FFFFFFFFFFFFFFFF
 // function toggleTimer() {
 //     if (timerStatus) {
 //         stopTimer()
