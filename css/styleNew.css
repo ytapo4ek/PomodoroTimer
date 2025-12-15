@@ -1,0 +1,172 @@
+.container {
+    height: 100vh;
+    background: linear-gradient(135deg, #94020280 0%, #02249e80 100%);
+    display: flex;
+    column-gap: 78px;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    border-radius: 32px;
+    width: 360px;
+    height: 800px;
+}
+
+.timer#focus {
+    background: #BA4949;
+}
+
+.timer#short {
+    background: #38858a;
+}
+
+.timer#long {
+    background: #397097;
+}
+
+.timer#focus .btn__toggle-play svg,
+.timer#focus .btn__toggle-stop svg {
+    fill: #BA4949;
+}
+
+.timer#short .btn__toggle-play svg,
+.timer#short .btn__toggle-stop svg {
+    fill: #38858a;
+}
+
+.timer#long .btn__toggle-play svg,
+.timer#long .btn__toggle-stop svg {
+    fill: #397097;
+}
+
+.timer__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 227px;
+    height: 227px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 52px 66px;
+}
+
+.timer__circle-numbers {
+    font-weight: 300;
+    font-size: 64px;
+    color: #fff;
+}
+
+.timer__control {
+    position: relative;
+    left: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-skip {
+    display: flex;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-skip:hover {
+    transform: scale(1.05);
+}
+
+.btn__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__toggle-play {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+    transform: none;
+    transition: transform 0.2s;
+    color: transparent;
+}
+
+.btn__toggle-stop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+    transform: none;
+    transition: transform 0.2s;
+    color: transparent;
+}
+
+.btn__toggle-play.active,
+.btn__toggle-stop.active {
+    display: flex;
+}
+
+.btn__toggle-play:hover {
+    transform: scale(1.05);
+}
+
+.sessions-dots {
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+    margin-bottom: 100px;
+    gap: 21px;
+}
+
+.dot {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.dot::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.dot.active::after {
+    opacity: 1;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+}
+
+.faq {
+    display: flex;
+    margin-top: 110px;
+    margin-left: 167px;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
