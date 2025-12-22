@@ -22,7 +22,7 @@ let timerInterval = null
 const notify = document.getElementById('notifyTrigger')
 
 notify.addEventListener('click', () => {
-    if (!(Notification in window)) {
+    if (!('Notification' in window)) {
         alert('Браузер не поддерживает уведомления')
         return
     }
