@@ -9,7 +9,6 @@ var times = {
 let currentMode = 'focus'
 let sessionIndex = 0
 let remainingSeconds = times[currentMode]
-let permission = await Notification.requestPermission()
 
 const timerDisplay = document.querySelector('.timer__circle-numbers')
 const timerBlock = document.querySelector('.timer')
