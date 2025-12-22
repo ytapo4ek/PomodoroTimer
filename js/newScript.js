@@ -1,6 +1,6 @@
 // ------------------ Настройки времени ------------------
 var times = {
-    focus: 0.1 * 60,  // 30 минут
+    focus: 30 * 60,  // 30 минут
     short: 5 * 60,   // короткий перерыв
     long: 15 * 60    // длинный перерыв
 }
@@ -9,6 +9,7 @@ var times = {
 let currentMode = 'focus'
 let sessionIndex = 0
 let remainingSeconds = times[currentMode]
+let permission = await Notification.requestPermission()
 
 const timerDisplay = document.querySelector('.timer__circle-numbers')
 const timerBlock = document.querySelector('.timer')
