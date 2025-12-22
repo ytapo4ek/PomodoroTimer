@@ -20,6 +20,20 @@ const dots = document.querySelectorAll('.dot')
 
 let timerStatus = false
 let timerInterval = null
+const notify = document.getElementById('notifyTrigger')
+
+notify.addEventListener('click', () => {
+    if (!(Notification in window)) {
+        alert('Браузер не поддерживает уведомления')
+        return
+    }
+
+    Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+            notify.style.display = 'none'
+        }
+    })
+})
 
 // ------------------ Форматирование времени ------------------
 function formatTime(seconds) {
